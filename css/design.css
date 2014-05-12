@@ -1,0 +1,89 @@
+/** DESIGN CSS **/
+
+body {
+  background-color: #f2f2f2;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px;
+  padding-top:20px;
+}
+
+header {
+  background-color: transparent;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1.5% 10% 1%;
+  width: 100%;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+}
+
+ul. {
+  font-size: 1em; font-weight:100;
+}
+
+.metadata {
+  font-size: 50%;
+  padding: 10px;
+  text-align: center;
+  /*border: 1px dotted DarkBlue;*/
+  margin: 10px 10px;
+}
+
+.metadata .title {
+  font-size: 75%;
+}
+
+.container dl dt {
+  font-style:italic;
+  text-transform:lowercase;
+}
+
+.container dl dd{
+  font-weight:bold;
+  text-transform:capitalize;
+}
+
+.container dl dd author {
+  font-weight:bold;
+  text-transform:capitalize;
+}
+
+.container dl dd title {
+  font-weight:bold;
+  text-transform:capitalize;
+}
+
+.container dl dd place {
+  text-transform:uppercase;
+}
+
+.container dl dd time {
+  font-weight:bold;
+  text-transform: uppercase;
+}
+
+
+/* UTILITIES */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.centered {
+  text-align: center;
+}
+
+.loading {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+}

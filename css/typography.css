@@ -1,0 +1,180 @@
+/** TYPOGRAPHY CSS **/
+
+/*
+  First, apply a [natural box layout](http://www.paulirish.com/2012/box-sizing-border-box-ftw) model to all elements.
+*/
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+/* Then, disable link styling */
+a {
+  text-decoration: none; color: inherit;
+}
+a:hover {
+     color:#00A0C6;
+     text-decoration:none;
+     cursor:pointer;
+}
+
+/* A basic Typesetting */
+
+header {
+  font-size: 2em; font-weight:200;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  line-height: 1.45;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  padding: 20px;
+  padding-top:20px;
+}
+
+footer {
+  font-size: 1em; font-weight:100;
+}
+
+/* Finetune Web Typography: map font weights and points to simple classes */
+
+.h0 {
+  font-size: 7em; font-weight:700;
+}
+
+.h01 {
+  font-size: 7em; font-weight:700; font-style: italic;
+}
+
+h1 {
+  font-size: 3em; font-weight:300;
+}
+
+h2 {
+  font-size: 3em; font-weight:300; font-style: italic;
+}
+
+h3 {
+  font-size: 2em; font-weight:200;
+}
+
+h4 {
+  font-size: 2em; font-weight:200; font-style: italic;
+}
+
+h5 {
+  font-size: 2em; font-weight:200;
+}
+
+h6 {
+  font-size: 2em; font-weight:200; font-style: italic;
+}
+
+p.pt8 {
+  font-size: 0.5em; font-weight:50;
+}
+
+p.pt10 {
+  font-size: 0.66em; font-weight:66;
+}
+
+p.pt12 {
+  font-size: 0.75em; font-weight:75;
+}
+
+p.pt16 {
+  font-size: 1em; font-weight:100;
+}
+
+p.pt24 {
+  font-size: 1.5em; font-weight:100;
+}
+
+p.pt36 {
+  font-size: 2.25em; font-weight:225;
+}
+
+p.pt48 {
+  font-size: 3em; font-weight:300;
+}
+
+p.pt64 {
+  font-size: 4em; font-weight:400;
+}
+
+dd {
+  text-decoration: overline;
+  font-style: italic;
+  font-weight:100;
+}
+
+/* Haiku Presets */
+
+#haiper section {
+  padding-top: 1.5em;
+}
+
+ul. {
+  font-size: 1em; font-weight:100;
+}
+
+dd.metadata  {
+  text-decoration: overline;
+}
+
+.author {
+  text-transform: capitalize;
+  text-decoration: overline;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.haiku {
+  whitespace: pre;
+  font-size: 2em; font-weight:200;
+  clear: both;
+  text-align: center;
+}
+
+.metadata {
+  font-size: 75%;
+  padding: 50px;
+  text-align: center;
+  margin: 100px 100px 50px 100px;
+}
+
+.word {
+  white-space: pre;
+}
+
+/* Pre tags must be styled separately */
+pre.haiku {
+  whitespace: pre;
+  font-family: 'Averia+Serif+Libre', serif;
+  font-size: 2em; font-weight:200;
+  text-align: center;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  clear: both;
+}
+
+/** Named Typesets **/
+
+.ancient {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.medieval {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.modern {
+  font-family: 'EB Garamond', serif;
+}

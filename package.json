@@ -1,0 +1,60 @@
+{
+    "name": "haiper",
+    "version": "0.1.1",
+    "description": "Haiku on Paper",
+    "author": "Priyatam Mudivarti",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/priyatam/haiper.git"
+    },
+    "bugs": {
+        "url": "https://github.com/priyatam/haiper/issues"
+    },
+    "keywords": [
+        "haiku",
+        "css3",
+        "rwd",
+        "typography"
+    ],
+    "browserify": {
+        "transform": [
+            "browserify-shim"
+        ]
+    },
+    "browserify-shim": {
+        "plugin": {
+            "exports": "plugin",
+            "depends": [
+                "jquery:$"
+            ]
+        }
+    },
+    "main": "gulpfile",
+    "devDependencies": {
+        "gulp": "3.6.1",
+        "gulp-buffer": "0.0.2",
+        "gulp-cache": "0.1.3",
+        "gulp-livereload": "~1.2.0",
+        "gulp-minify-css": "0.3.1",
+        "gulp-jshint": "1.5.3",
+        "gulp-imagemin": "~0.1.5",
+        "gulp-util": "^2.2.14",
+        "gulp-uglify": "0.2.1",
+        "gulp-open": "~0.2.8",
+        "gulp-notify": "~1.2.4",
+        "gulp-clean": "0.2.4",
+        "gulp-rename": "1.2.0",
+        "gulp-concat": "2.2.0",
+        "gulp-changed": "~0.3.0",
+        "browserify": "~3.36.0",
+        "browserify-shim": "~3.4.1",
+        "connect": "~2.14.3",
+        "glob": "^3.2.9",
+        "vinyl-source-stream": "~0.1.1",
+        "yaml-front-matter": "^3.0.1"
+    },
+    "dependencies": {
+        "jquery": "~2.1.0",
+        "underscore": "~1.6.0"
+    }
+}

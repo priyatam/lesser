@@ -4,7 +4,7 @@
 
 Haiku on Paper.
 
-Sample Design, Typeset, and [Spec](/SPEC.md). Uses [gulp](http://gulpjs.com/) for streaming tasks and [Browserify](http://browserify.org).
+Sample Layout, Design, and [Spec](/SPEC.md). Uses [gulp](http://gulpjs.com/) for streaming tasks with [Browserify](http://browserify.org).
 
 ## Usage
 
@@ -16,11 +16,7 @@ Install gulp, globally
 
     npm install -g gulp
 
-Setup a local server:
-
-    npm install -g static
-
-Run `static` from project root and preview site at `http://127.0.0.1:8080`
+See [Gulp](/gulpfile.js) for tasks.
 
 ## Status
 
@@ -31,10 +27,11 @@ Experimental.
 - Priyatam Mudivarti
 - Matt Martini
 
-## Credits, Thanks
+## Credits
 
-- @[H5BP](http://html5boilerplate.com)
-- Adam Kaplan [Responsive Web Design](http://www.adamkaplan.me/grid/)
+- [Responsive Web Design](http://www.adamkaplan.me/grid/)
+- [Gulp Starter](https://github.com/greypants/gulp-starter)
+- [Square Boy](https://github.com/harsha-mudi/squareboy)
 
 ## Copyright & License
 

@@ -1,20 +1,28 @@
 ## Haiper
 
-## Overview
-
 Haiku on Paper.
 
-Sample Layout, Design, and [Spec](/SPEC.md). Uses [gulp](http://gulpjs.com/) for streaming tasks with [Browserify](http://browserify.org).
+Sample A4 Layout, Design, and [Spec](/SPEC.md). Uses [gulp](http://gulpjs.com/) for streaming tasks with [Browserify](http://browserify.org).
 
 ## Usage
 
-If you've never used Node or npm before, you'll need to install Node. If you use homebrew, do:
+If you've never used Node or npm before, install Node with [homebrew](http://brew.sh/):
 
     brew install node
 
-Install gulp, globally
+Install gulp, globally:
 
     npm install -g gulp
+
+After completing the setup, update your local npm/browserify dependencies (do this everytime you add something to package.json):
+
+    npm install
+
+Run default task on gulp:
+
+    gulp
+
+This minifies css, js, and runs a static server at localhost:8080
 
 See [Gulp](/gulpfile.js) for tasks.
 

@@ -1,4 +1,5 @@
-/*Original CSS by Adam Kaplan http://www.adamkaplan.me/grid/*/
+/* http://www.adamkaplan.me/grid/ */
+
 
 /* Layout
    ========================================================================== */
@@ -83,42 +84,6 @@ header a:hover { text-decoration: none; }
   .mobile { max-width: 250px; }
 }
 
-/* Footer */
-
-footer {
-  background-color: #497bad;
-  text-align: center;
-}
-
-.intro { margin: 2rem 0; }
-
-@media (min-width: 40rem) {
-  .intro { margin: 4rem 0; }
-}
-
-footer h4 {
-  border: 3px solid #fff;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  color: #fff;
-  padding: .4rem .6rem;
-  display: inline-block;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-
-footer p {
-  color: rgba(255,255,255,0.7);
-  margin: 0 auto;
-}
-
-footer a {
-  color: rgba(255,255,255,0.9);
-  text-decoration: underline;
-}
-
 /* Section
    ========================================================================== */
 
@@ -151,7 +116,7 @@ section:first-of-type { border-top: none; }
   .column.two-thirds { width: 66.7%; }
   .column.half { width: 50%; }
   .column.third { width: 33.3%; }
-  .column.fourth { width: 24.95%; }
+  .column.fourth { width: 25%; }
   .column.flow-opposite { float: right; }
 }
 
@@ -175,7 +140,6 @@ h1 {
 
 h3 {
   font-size: 1.2rem;
-  font-style:italic;
   margin-bottom: .5rem;
 }
 
@@ -325,7 +289,7 @@ img {
 .example img { margin: 0; }
 
 .fragmentation {
-  background-image: url("/images/grid/fragmentation.png");
+  background-image: url("/images/fragmentation.png");
   background-size: cover;
   min-height: 250px;
 }
@@ -379,6 +343,25 @@ img {
   .row-example .row { padding: 1rem 0 0 0; }
 }
 
+.gutters {
+  border: 2px dashed #eee;
+  margin-bottom: 2rem;
+  max-width: 39rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.gutters .column {
+  background: #fb917e;
+  margin-bottom: 1rem;
+}
+
+.gutters span {
+  background: #f8f8f8;
+  color: #999;
+  display: block;
+  padding: 1rem 0;
+}
+
 /* Box Model
    ========================================================================== */
 
@@ -395,7 +378,7 @@ img {
 .gist .gist-file {
   font-size: .9rem !important;
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 39rem;
   overflow: hidden !important;
   text-align: left;
 }

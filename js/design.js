@@ -17,4 +17,12 @@ $(function() {
         }
     });
 
+    // flowtype typography
+    /*$('body').flowtype({
+        minimum: 500,
+        maximum: 1600,
+        minFont: 9,
+        maxFont: 36,
+    });*/
+
 });

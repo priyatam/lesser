@@ -1,22 +1,5 @@
 /** TYPOGRAPHY CSS **/
 
-/*
-  First, apply a [natural box layout](http://www.paulirish.com/2012/box-sizing-border-box-ftw) model to all elements.
-*/
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-}
-
-/* Then, disable link styling */
-a {
-  text-decoration: none; color: inherit;
-}
-a:hover {
-     color:#00A0C6;
-     text-decoration:none;
-     cursor:pointer;
-}
-
 /* A basic Typesetting */
 
 header {
@@ -28,7 +11,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Alegreya Sans', sans-serif;
   font-size: 18px;
   padding: 20px;
   padding-top:20px;
@@ -112,16 +95,18 @@ dd {
 
 /* Haiku Presets */
 
-#haiper section {
-  padding-top: 1.5em;
-}
-
 ul. {
   font-size: 1em; font-weight:100;
 }
 
 dd.metadata  {
   text-decoration: overline;
+}
+
+
+
+#haiper section {
+  padding-top: 1.5em;
 }
 
 .author {
@@ -138,34 +123,21 @@ dd.metadata  {
 .haiku {
   whitespace: pre;
   font-size: 2em; font-weight:200;
-  clear: both;
   text-align: center;
+  clear: both;
 }
 
 .metadata {
+  font-size: 50%;
+  padding: 10px;
+  text-align: center;
+  /*border: 1px dotted DarkBlue;*/
+  margin: 10px 10px;
+}
+
+.metadata .title {
   font-size: 75%;
-  padding: 50px;
-  text-align: center;
-  margin: 100px 100px 50px 100px;
 }
-
-.word {
-  white-space: pre;
-}
-
-/* Pre tags must be styled separately */
-pre.haiku {
-  whitespace: pre;
-  font-family: 'Averia+Serif+Libre', serif;
-  font-size: 2em; font-weight:200;
-  text-align: center;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  clear: both;
-}
-
-/** Named Typesets **/
 
 .ancient {
   font-family: 'Libre Baskerville', serif;

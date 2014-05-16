@@ -21,20 +21,19 @@ header {
   -khtml-border-radius: 10px;
 }
 
+
+/* Disable link styling */
+a {
+  text-decoration: none; color: inherit;
+}
+a:hover {
+     color:#00A0C6;
+     text-decoration:none;
+     cursor:pointer;
+}
+
 ul. {
   font-size: 1em; font-weight:100;
-}
-
-.metadata {
-  font-size: 50%;
-  padding: 10px;
-  text-align: center;
-  /*border: 1px dotted DarkBlue;*/
-  margin: 10px 10px;
-}
-
-.metadata .title {
-  font-size: 75%;
 }
 
 .container dl dt {
@@ -65,7 +64,6 @@ ul. {
   font-weight:bold;
   text-transform: uppercase;
 }
-
 
 /* UTILITIES */
 

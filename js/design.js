@@ -18,7 +18,7 @@ $(function() {
     });
 
     // flowtype typography
-    /*$('body').flowtype({
+    /*$('.haiku').flowtype({
         minimum: 500,
         maximum: 1600,
         minFont: 9,

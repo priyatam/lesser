@@ -13,8 +13,6 @@ h1,h2,h3,h4,h5,h6,p {
 body {
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 18px;
-  padding: 20px;
-  padding-top:20px;
 }
 
 footer {
@@ -93,51 +91,47 @@ dd {
   font-weight:100;
 }
 
-/* Haiku Presets */
-
-ul. {
-  font-size: 1em; font-weight:100;
-}
-
-dd.metadata  {
-  text-decoration: overline;
-}
-
-
+/* Haiku Typesetting */
 
 #haiper section {
   padding-top: 1.5em;
 }
 
+.haiku {
+  whitespace: pre;
+  font-family: 'EB Garamond', serif;
+  font-size: 1em; font-weight:100;
+  text-align: center;
+  border: 1px dotted DarkBlue;
+  padding: 10px;
+}
+
 .author {
+  font-weight:bold;
   text-transform: capitalize;
   text-decoration: overline;
   text-align: center;
 }
 
 .title {
+  font-size: 0.5em; font-weight:50;
   text-transform: uppercase;
-  text-align: center;
-}
-
-.haiku {
-  whitespace: pre;
-  font-size: 2em; font-weight:200;
-  text-align: center;
-  clear: both;
+  text-align: left;
+  display: block;
 }
 
 .metadata {
-  font-size: 50%;
+  font-size: 75%;
   padding: 10px;
   text-align: center;
-  /*border: 1px dotted DarkBlue;*/
   margin: 10px 10px;
 }
 
-.metadata .title {
-  font-size: 75%;
+
+dd.metadata  {
+  text-decoration: overline;
 }
+/* Presets */
 
 .ancient {
   font-family: 'Libre Baskerville', serif;
@@ -149,4 +143,8 @@ dd.metadata  {
 
 .modern {
   font-family: 'EB Garamond', serif;
+}
+
+.robot {
+  font-family: 'Roboto', sans-serif;
 }

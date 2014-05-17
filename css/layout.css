@@ -5,8 +5,9 @@ body {
   color: #555;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
-  padding: 20px;
-  padding-top:20px;
+  border: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 
 header {
@@ -20,7 +21,6 @@ header {
   -webkit-border-radius: 10px;
   -khtml-border-radius: 10px;
 }
-
 
 /* Disable link styling */
 a {
@@ -36,34 +36,13 @@ ul. {
   font-size: 1em; font-weight:100;
 }
 
-.container dl dt {
-  font-style:italic;
-  text-transform:lowercase;
+
+/* Grid.css overrides */
+
+.container row {
+  border: 5px;
 }
 
-.container dl dd{
-  font-weight:bold;
-  text-transform:capitalize;
-}
-
-.container dl dd author {
-  font-weight:bold;
-  text-transform:capitalize;
-}
-
-.container dl dd title {
-  font-weight:bold;
-  text-transform:capitalize;
-}
-
-.container dl dd place {
-  text-transform:uppercase;
-}
-
-.container dl dd time {
-  font-weight:bold;
-  text-transform: uppercase;
-}
 
 /* UTILITIES */
 

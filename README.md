@@ -2,7 +2,16 @@
 
 Haiku on Paper.
 
+## Overview
+
 Sample A4 Layout, Design, and [Spec](/SPEC.md). Uses [gulp](http://gulpjs.com/) for streaming tasks with [Browserify](http://browserify.org).
+
+Uses:
+
+- HTML5/Jade
+- CSS3/Stylus
+- KerningJs, LetteringJs, FlowtypeJs
+- Gulpjs (live task runner)
 
 ## Usage
 

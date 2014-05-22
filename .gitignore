@@ -1,3 +1,8 @@
+# Ignore generated styles
+css/layout.css
+css/print.css
+css/typography.css
+
 build
 .*.swp
 ._*

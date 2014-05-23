@@ -1,6 +1,5 @@
 var gulp = require("gulp"),
     gutil = require('gulp-util'),
-    gprint = require('gulp-print'),
     fs = require('fs'),
     path = require('path'),
     changed = require('gulp-changed'),
@@ -25,20 +24,20 @@ var gulp = require("gulp"),
 
 var config = {
     root: path.resolve('./'),
-    content: './haikus/**/*.txt',
     images: ['./img/**/*.png', './img/**/*.jpg'],
     illustrations: './img/**/*.svg',
+    content: './haikus/**/*.txt',
     templates: './templates/**/*.jade',
     styles: './css/**/*.styl',
     styles_lib: './css/lib/**/*.css',
     scripts: './js/**/*.js',
-    site: './site',
-    site_index: './site/index.html',
-    site_script: './site/haiper.min.js',
-    site_style: './site/haiper.min.css',
-    site_vendor_style: './site/haiper.vendors.min.css',
-    site_images: './site/img',
-    site_fonts: './site/fonts',
+    site: './app',
+    site_index: './app/index.html',
+    site_script: 'haiper.min.js',
+    site_style: 'haiper.min.css',
+    site_vendor_style: 'haiper.vendors.min.css',
+    site_images: './app/img',
+    site_fonts: './app/fonts',
     port: 8000
 };
 
@@ -60,7 +59,6 @@ gulp.task('clean', function() {
     return gulp.src(files, {
         read: false
     })
-        .pipe(gprint())
         .pipe(clean({
             force: true
         }));
@@ -122,7 +120,7 @@ gulp.task('build-scripts', function() {
     return gulp.src(config.scripts)
         .pipe(changed(config.site))
         .pipe(uglify())
-        .pipe(concat('haiper.min.js'))
+        .pipe(concat(config.site_script))
         .pipe(gulp.dest(config.site))
         .pipe(connect.reload());
 });
@@ -170,12 +168,13 @@ gulp.task('start-server', function() {
     });
 });
 
-gulp.task('open', function() {
+gulp.task("open", function() {
     var options = {
         url: "http://localhost:" + config.port,
         app: "google chrome"
     };
-    return gulp.src(config.site + "/index.html").pipe(open("", options));
+    gulp.src(config.app_index)
+        .pipe(open("", options));
 });
 
 gulp.task('watch', function() {
@@ -212,4 +211,4 @@ gulp.task('browserify', function() {
 
 gulp.task('build', ['build-content', 'build-templates', 'build-styles', 'build-styles-lib', 'build-scripts', 'build-images', 'build-illustrations']);
 
-gulp.task('default', ['start-server', 'build', 'rev', 'watch', 'open']);
+gulp.task('default', ['start-server', 'build', 'watch', 'open']);

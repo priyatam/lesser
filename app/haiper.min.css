@@ -53,7 +53,7 @@ p.pt48{font-size:3em;font-weight:300}
 p.pt64{font-size:4em;font-weight:400}
 dd{text-decoration:overline;font-style:italic;font-weight:100}
 #haiper section{padding-top:1.5em}
-.haiku{whitespace:pre;font-family:'EB Garamond',serif;font-size:1em;font-weight:100;text-align:center;border:1px dotted #00008b;padding:10px}
+.haiku{whitespace:pre;font-family:'EB Garamond',serif;font-size:2em;font-weight:200;text-align:center;border:1px dotted #00008b;padding:10px}
 .author{font-weight:700;text-transform:capitalize;text-decoration:overline;text-align:center}
 .title{font-size:.5em;font-weight:50;text-transform:uppercase;text-align:left;display:block}
 .metadata{font-size:75%;padding:10px;text-align:center;margin:10px}

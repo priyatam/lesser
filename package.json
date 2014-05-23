@@ -31,9 +31,9 @@
     },
     "main": "gulpfile",
     "devDependencies": {
-        "browserify": "~3.44.2",
-        "gulp": "3.6.1",
-        "gulp-jade": "0.5.0",
+        "browserify": "3.44.2",
+        "gulp": "3.6.2",
+        "gulp-jade": "~0.5.0",
         "gulp-stylus": "~1.0.1",
         "gulp-rev": "0.4.0",
         "gulp-marked": "0.2.0",

@@ -1,7 +1,7 @@
 var gulp = require("gulp"),
     gutil = require('gulp-util'),
-    fs = require('fs'),
     gprint = require('gulp-print'),
+    fs = require('fs'),
     path = require('path'),
     changed = require('gulp-changed'),
     clean = require('gulp-clean'),
@@ -25,11 +25,12 @@ var gulp = require("gulp"),
 // Global Config
 var config = {
     root: path.resolve('./'),
-    content: 'haikus/**/*.md',
+    content: './haikus/**/*.txt',
     images: ['./img/**/*.png', './img/**/*.jpg'],
     illustrations: './img/**/*.svg',
     templates: './**/*.jade',
     styles: './css/**/*.styl',
+    lib_styles: './css/lib/**/*.css',
     scripts: './js/**/*.js',
     publish: './site',
     publish_img: './site/img',
@@ -59,6 +60,7 @@ gulp.task('clean', function() {
         }));
 });
 
+// TODO
 gulp.task('transform-text', function() {
     gulp.src('./index.html')
         .pipe(replace({
@@ -70,7 +72,6 @@ gulp.task('transform-text', function() {
         .pipe(gulp.dest(config.publish));
 });
 
-// TODO
 gulp.task('build-content', function() {
     gulp.src(config.content)
         .pipe(frontMatter({
@@ -86,30 +87,13 @@ gulp.task('build-content', function() {
             smartLists: true,
             smartypants: false
         }))
-        .pipe(concat('haiper.content.json'))
-        .pipe(gulp.dest(config.publish));
-});
-
-// TODO
-gulp.task('build-data', function() {
-    gulp.src(config.content)
-        .pipe(frontMatter({
-            property: 'frontMatter',
-        }))
-        .pipe(concat('haiper.data.json'))
+        .pipe(concat('haiper.haiku.html'))
         .pipe(gulp.dest(config.publish));
 });
 
 gulp.task('build-templates', function() {
-    var data = {}; // TODO: get front matter
-
     gulp.src(config.templates)
-        .pipe(frontMatter({
-            property: 'frontMatter',
-        }))
-        .pipe(jade({
-            locals: data
-        }))
+        .pipe(jade())
         .pipe(gulp.dest(config.publish))
         .pipe(connect.reload());
 });
@@ -123,6 +107,19 @@ gulp.task('build-styles', function() {
             keepBreaks: true
         }))
         .pipe(concat('haiper.min.css'))
+        .pipe(gulp.dest(config.publish))
+        .pipe(connect.reload());
+});
+
+gulp.task('build-lib-styles', function() {
+    gulp.src(config.lib_styles)
+        .pipe(stylus({
+            errors: true
+        }))
+        .pipe(minifyCSS({
+            keepBreaks: true
+        }))
+        .pipe(concat('haiper.vendors.min.css'))
         .pipe(gulp.dest(config.publish))
         .pipe(connect.reload());
 });
@@ -196,6 +193,6 @@ gulp.task('browserify', function() {
         .pipe(gulp.dest(haiper.siteDir));
 });
 
-gulp.task('build', ['build-content', 'build-templates', 'build-styles', 'build-scripts', 'build-images']);
+gulp.task('build', ['build-content', 'build-templates', 'build-styles', 'build-lib-styles', 'build-scripts', 'build-images', 'build-illustrations']);
 
-gulp.task('default', ['start-server', 'build', 'watch']);
+gulp.task('default', ['start-server', 'build', 'watch', 'open']);

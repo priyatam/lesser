@@ -15,6 +15,7 @@ var gulp = require("gulp"),
     source = require('vinyl-source-stream'),
     stylus = require('gulp-stylus'),
     jade = require('gulp-jade'),
+    rev = require('gulp-rev'),
     replace = require('gulp-replace-task'),
     connect = require('gulp-connect'),
     open = require('gulp-open'),
@@ -22,35 +23,40 @@ var gulp = require("gulp"),
     notify = require("gulp-notify");
 
 
-// Global Config
 var config = {
     root: path.resolve('./'),
     content: './haikus/**/*.txt',
     images: ['./img/**/*.png', './img/**/*.jpg'],
     illustrations: './img/**/*.svg',
-    templates: './**/*.jade',
+    templates: './templates/**/*.jade',
     styles: './css/**/*.styl',
-    lib_styles: './css/lib/**/*.css',
+    styles_lib: './css/lib/**/*.css',
     scripts: './js/**/*.js',
-    publish: './site',
-    publish_img: './site/img',
-    publish_fonts: './site/fonts',
+    site: './site',
+    site_index: './site/index.html',
+    site_script: './site/haiper.min.js',
+    site_style: './site/haiper.min.css',
+    site_vendor_style: './site/haiper.vendors.min.css',
+    site_images: './site/img',
+    site_fonts: './site/fonts',
     port: 8000
 };
 
 gulp.task('init', function() {
-    fs.mkdirSync(config.publish);
-    fs.mkdirSync(config.publish + "/fonts");
-    fs.mkdirSync(config.publish + "/img");
+    fs.mkdirSync(config.site);
+    fs.mkdirSync(config.site + "/fonts");
+    fs.mkdirSync(config.site + "/img");
 });
 
 gulp.task('clean', function() {
     var files = [
-        config.publish + '/*.js',
-        config.publish + '/*.css',
-        config.publish + '/fonts/*.*',
-        config.publish + '/*.html',
+        config.site + '/*.js',
+        config.site + '/*.css',
+        config.site + '/img/*.*',
+        config.site + '/fonts/*.*',
+        config.site + '/*.html',
     ];
+
     return gulp.src(files, {
         read: false
     })
@@ -58,18 +64,6 @@ gulp.task('clean', function() {
         .pipe(clean({
             force: true
         }));
-});
-
-// TODO
-gulp.task('transform-text', function() {
-    gulp.src('./index.html')
-        .pipe(replace({
-            patterns: [{
-                match: 'foo',
-                replacement: 'bar'
-            }]
-        }))
-        .pipe(gulp.dest(config.publish));
 });
 
 gulp.task('build-content', function() {
@@ -88,13 +82,13 @@ gulp.task('build-content', function() {
             smartypants: false
         }))
         .pipe(concat('haiper.haiku.html'))
-        .pipe(gulp.dest(config.publish));
+        .pipe(gulp.dest(config.site));
 });
 
 gulp.task('build-templates', function() {
     gulp.src(config.templates)
         .pipe(jade())
-        .pipe(gulp.dest(config.publish))
+        .pipe(gulp.dest(config.site))
         .pipe(connect.reload());
 });
 
@@ -107,49 +101,70 @@ gulp.task('build-styles', function() {
             keepBreaks: true
         }))
         .pipe(concat('haiper.min.css'))
-        .pipe(gulp.dest(config.publish))
+        .pipe(gulp.dest(config.site))
         .pipe(connect.reload());
 });
 
-gulp.task('build-lib-styles', function() {
-    gulp.src(config.lib_styles)
+gulp.task('build-styles-lib', function() {
+    gulp.src(config.styles_lib)
         .pipe(stylus({
             errors: true
         }))
         .pipe(minifyCSS({
             keepBreaks: true
         }))
-        .pipe(concat('haiper.vendors.min.css'))
-        .pipe(gulp.dest(config.publish))
+        .pipe(concat(config.site_vendor_style))
+        .pipe(gulp.dest(config.site))
         .pipe(connect.reload());
 });
 
 gulp.task('build-scripts', function() {
     return gulp.src(config.scripts)
-        .pipe(changed(config.publish))
+        .pipe(changed(config.site))
         .pipe(uglify())
         .pipe(concat('haiper.min.js'))
-        .pipe(gulp.dest(config.publish))
+        .pipe(gulp.dest(config.site))
         .pipe(connect.reload());
 });
 
 gulp.task('build-images', function() {
     return gulp.src(config.images)
-        .pipe(changed(config.publish_img))
+        .pipe(changed(config.site_images))
         .pipe(imagemin())
-        .pipe(gulp.dest(config.publish_img));
+        .pipe(gulp.dest(config.site_images));
 });
 
 gulp.task('build-illustrations', function() {
     return gulp.src(config.illustrations)
-        .pipe(changed(config.publish_img))
+        .pipe(changed(config.site_images))
         .pipe(svgmin())
-        .pipe(gulp.dest(config.publish_img));
+        .pipe(gulp.dest(config.site_images));
+});
+
+// TODO: Integrate with build-index
+gulp.task('rev', function() {
+    return gulp.src([config.site_style, config.site_script])
+        .pipe(rev())
+        .pipe(gulp.dest(config.site))
+        .pipe(rev.manifest())
+        .pipe(gulp.dest(config.site));
+});
+
+// TODO
+gulp.task('build-index', function() {
+    gulp.src('./index.html')
+        .pipe(replace({
+            patterns: [{
+                match: 'foo',
+                replacement: 'bar'
+            }]
+        }))
+        .pipe(gulp.dest(config.site));
 });
 
 gulp.task('start-server', function() {
     connect.server({
-        root: config.publish,
+        root: config.site,
         port: config.port,
         livereload: true
     });
@@ -160,7 +175,7 @@ gulp.task('open', function() {
         url: "http://localhost:" + config.port,
         app: "google chrome"
     };
-    return gulp.src(config.publish + "/index.html").pipe(open("", options));
+    return gulp.src(config.site + "/index.html").pipe(open("", options));
 });
 
 gulp.task('watch', function() {
@@ -169,6 +184,7 @@ gulp.task('watch', function() {
     gulp.watch(config.scripts, ['build-scripts']);
 });
 
+// FIXME
 gulp.task('browserify', function() {
     return browserify({
         entries: ['./js/design.js'],
@@ -186,13 +202,14 @@ gulp.task('browserify', function() {
                 message: "<%= error.message %>"
             }).apply(this, args);
 
-            // Keep gulp from hanging on this task
+            // Keep gulp from hanging
             this.emit('end');
         })
         .pipe(source('design.js'))
         .pipe(gulp.dest(haiper.siteDir));
 });
 
-gulp.task('build', ['build-content', 'build-templates', 'build-styles', 'build-lib-styles', 'build-scripts', 'build-images', 'build-illustrations']);
 
-gulp.task('default', ['start-server', 'build', 'watch', 'open']);
+gulp.task('build', ['build-content', 'build-templates', 'build-styles', 'build-styles-lib', 'build-scripts', 'build-images', 'build-illustrations']);
+
+gulp.task('default', ['start-server', 'build', 'rev', 'watch', 'open']);

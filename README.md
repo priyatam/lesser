@@ -1,12 +1,10 @@
 ## Haiper
 
-Haiku on Paper.
+Haiku on A4 Paper.
 
 ## Overview
 
-Sample A4 Layout, Design, and [Spec](/SPEC.md). Uses [gulp](http://gulpjs.com/) for streaming tasks with [Browserify](http://browserify.org).
-
-Uses:
+Sample A4 Layout, Design, and [Spec](/SPEC.md). Optimized for:
 
 - HTML5/Jade
 - CSS3/Stylus
@@ -15,7 +13,7 @@ Uses:
 
 ## Usage
 
-If you've never used Node or npm before, install Node with [homebrew](http://brew.sh/):
+If you've never used npm before, install Node with [homebrew](http://brew.sh/):
 
     brew install node
 
@@ -47,9 +45,8 @@ Experimental.
 ## Credits
 
 - [Responsive Web Design](http://www.adamkaplan.me/grid/)
-- [Gulp Starter](https://github.com/greypants/gulp-starter)
 - [Square Boy](https://github.com/harsha-mudi/squareboy)
 
 ## Copyright & License
 
-Licensed under MIT License. See [LICENSE](/LICENSE) for more details.
+MIT License. See [LICENSE](/LICENSE) for more details.

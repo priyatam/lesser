@@ -1,50 +1,57 @@
 doctype html
 html(lang="en")
-head
-  meta(charset="utf-8")
-  meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-  meta(name="description", content="Print haikus on A4")
-  meta(name="viewport", content="width=device-width, initial-scale=1")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="description", content="Print haikus on A4")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
 
-  title
-    | Haiku on Paper
+    title
+      | Haiku on Paper
 
-  // Fonts
-  link(rel='stylesheet' href='//brick.a.ssl.fastly.net/EB+Garamond:400,400i/Open+Sans:400,700')
-  link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Alegreya+Sans:400')
-  link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Libre+Baskerville:400')
-  link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Montserrat:400')
+    // Fonts
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/EB+Garamond:400,400i/Open+Sans:400,700')
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Alegreya+Sans:400')
+    link(rel='stylesheet' href='//brick.a.ssl.fastly.net/Libre+Baskerville:400')
 
-  // Styles
-  link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css')
-  link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css')
-  link(rel='stylesheet', href='/haiper.min.css')
+    // Styles
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css')
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css')
+    link(rel='stylesheet', href='/haiper.vendors.min.css')
+    link(rel='stylesheet', href='/haiper.min.css')
 
-  // Scripts
-  script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-  script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js')
-  script(src='//cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js')
-  script(src='//cdnjs.cloudflare.com/ajax/libs/kerning.js/0.2/kerning.min.js')
-  script(src='//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.js')
-  script(src='/haiper.min.js')
+    // Scripts
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/kerning.js/0.2/kerning.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.js')
+    script(src='/haiper.min.js')
 
-body
-  .container
+  body.container
 
     .row.clearfix
+      .column
+        ul.metadata
+          li
+            a(href='#countries/greece') Japan
+          li
+            a(href='#time/600-BC') 1530
+          li
+            a(href='#search?query=love+show=any') nature
+          li
+            a(href='#search?query=lyric+show=any') seasons
+          li
+            a(href='#search?query=memory+show=any') bugs
 
-      .column.fourth
-
-        a(href="#authors/basho" class='title') Basho
-
+    .row.clearfix
+      .column
         p.haiku
           |  Autumn Moonlight&mdash;<br/>
           |  a worm digs silently<br/>
           |  into the chestnut.<br/>
 
-        dd.metadata
-          a(href='#countries/greece') Japan
-            a(href='#time/600-BC') 1530
-            a(href='#search?query=love+show=any') nature
-            a(href='#search?query=lyric+show=any') seasons
-            a(href='#search?query=memory+show=any') bugs
+    .row.clearfix
+      .column
+        p.author
+          a(href='#authors/basho') Basho

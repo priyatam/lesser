@@ -1,6 +1,6 @@
 /** TYPOGRAPHY **/
 
-/* Default Typesetting */
+/** Default Typeset **/
 
 header
   font-size 2em
@@ -76,46 +76,49 @@ p.pt64
   font-size 4em
   font-weight 400
 
-dd
-  text-decoration overline
-  font-style italic
+ul
+  font-size 1em
   font-weight 100
+  font-style italic
+  margin 0
+  padding 0
+  list-style-type disc
+  text-align left
+  display block
+
+li
+  display inline
+
+a
+  padding 2px
+
 
 /* Haiku Typesetting */
 
-#haiper section
-  padding-top 1.5em
+.metadata
+  font-size 75%
+  text-align left
 
 .haiku
-  whitespace pre
+  whitespace: pre
   font-family 'EB Garamond', serif
   font-size 2em
   font-weight 200
   text-align center
-  border 1px dotted DarkBlue
   padding 10px
+  border 1px
+  margin 1px
+  line-height 1.2em
 
-.author
+p.author
+  padding 1px
   font-weight bold
-  text-transform capitalize
-  text-decoration overline
-  text-align center
-
-.title
-  font-size 0.5em
-  font-weight 50
   text-transform uppercase
-  text-align left
-  display block
+  text-align right
 
-.metadata
-  font-size 75%
-  padding 10px
-  text-align center
-  margin 10px 10px
-
-dd.metadata
-  text-decoration overline
+a:hover
+  text-decoration none
+  cursor pointer
 
 /* Presets */
 

@@ -18,11 +18,12 @@ $(function() {
     });
 
     // flowtype typography
-    /*$('.haiku').flowtype({
+    $('.body').flowtype({
         minimum: 500,
-        maximum: 1600,
-        minFont: 9,
-        maxFont: 36,
-    });*/
+        maximum: 1200,
+        minFont: 8,
+        maxFont: 32,
+        fontRatio: 30;
+    });
 
 });

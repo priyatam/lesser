@@ -33,9 +33,9 @@ var config = {
     scripts: './js/**/*.js',
     site: './app',
     site_index: './app/index.html',
-    site_script: 'haiper.min.js',
-    site_style: 'haiper.min.css',
-    site_vendor_style: 'haiper.vendors.min.css',
+    site_script: 'site.min.js',
+    site_style: 'site.min.css',
+    site_vendor_style: 'site.vendors.min.css',
     site_images: './app/img',
     site_fonts: './app/fonts',
     port: 8000
@@ -207,7 +207,6 @@ gulp.task('browserify', function() {
         .pipe(source('design.js'))
         .pipe(gulp.dest(haiper.siteDir));
 });
-
 
 gulp.task('build', ['build-content', 'build-templates', 'build-styles', 'build-styles-lib', 'build-scripts', 'build-images', 'build-illustrations']);
 

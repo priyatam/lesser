@@ -1,7 +1,7 @@
 {
     "name": "haiper",
     "version": "0.1.2",
-    "description": "Haiku on Paper",
+    "description": "Gulp Minimalist",
     "author": "Priyatam Mudivarti",
     "repository": {
         "type": "git",
@@ -11,10 +11,11 @@
         "url": "https://github.com/priyatam/haiper/issues"
     },
     "keywords": [
-        "haiku",
+        "gulp",
         "css3",
-        "rwd",
-        "typography"
+        "stylus",
+        "jade",
+        "html5"
     ],
     "browserify": {
         "transform": [

@@ -1,12 +1,14 @@
-## Gulp Minimalist
+## Gulp Tutorial
 
 A gentle introduction to building boilerplates with [gulp](http://gulpjs.com/).
 
 ## Overview
 
-Gulp lets you build boilerplates for sites and browser apps without the need to learn another toolkit (yeoman, lineman, brunch, etc.,). A boilerplate consists of a set of tasks chained by [streams](https://github.com/substack/stream-handbook). Most tasks are accomplished via a growing set of gulp plugins like [this](https://www.npmjs.org/package/gulp-connect) and [this](https://www.npmjs.org/package/gulp-browserify). By composing tasks with minimal api (three), you can build custom stacks.
+Gulp lets you build boilerplates for sites and browser apps without the need to learn another toolkit (yeoman, lineman, brunch, etc.,). A boilerplate consists of a set of tasks chained by [streams](https://github.com/substack/stream-handbook). Most tasks are accomplished via a growing set of gulp plugins like [this](https://www.npmjs.org/package/gulp-connect) and [this](https://www.npmjs.org/package/gulp-browserify).
 
-For a high level overview, see [Introducing Gulp]((http://slides.com/contra/gulp#/).
+By composing tasks that do one thing and one thing only, you gain control over your application's flow.
+
+For a high level overview, see [Introducing Gulp](http://slides.com/contra/gulp#/).
 
 ## Setup
 
@@ -43,7 +45,7 @@ This minifies css, js, and runs a static server at localhost:8080
 See [Gulp](/gulpfile.js) for tasks.
 
 
-Tutorial: TODO
+_Tutorial: Incomplete_
 
 ## Available Boilerplates
 

@@ -1,17 +1,14 @@
-## Haiper
+## Gulp Minimalist
 
-Haiku on A4 Paper.
+A gentle introduction to building boilerplates with [gulp](http://gulpjs.com/).
 
 ## Overview
 
-Sample A4 Layout, Design, and [Spec](/SPEC.md). Optimized for:
+Gulp lets you build boilerplates for sites and browser apps without the need to learn another toolkit (yeoman, lineman, brunch, etc.,). A boilerplate consists of a set of tasks chained by [streams](https://github.com/substack/stream-handbook). Most tasks are accomplished via a growing set of gulp plugins like [this](https://www.npmjs.org/package/gulp-connect) and [this](https://www.npmjs.org/package/gulp-browserify). By composing tasks with minimal api (three), you can build custom stacks.
 
-- HTML5/Jade
-- CSS3/Stylus
-- KerningJs, LetteringJs, FlowtypeJs
-- Gulpjs (live task runner)
+For a high level overview, see [Introducing Gulp]((http://slides.com/contra/gulp#/).
 
-## Usage
+## Setup
 
 If you've never used npm before, install Node with [homebrew](http://brew.sh/):
 
@@ -29,22 +26,31 @@ Run default task on gulp:
 
     gulp
 
+## Tutorial (with a sample boilerplate)
+
+This repo consists of a sample boilerplate to build websites with Stylus, Jade
+
+- HTML5/Jade
+- CSS3/Stylus
+- minifier, uglifier, browserify ...
+
+Run default task on gulp:
+
+    gulp
+
 This minifies css, js, and runs a static server at localhost:8080
 
 See [Gulp](/gulpfile.js) for tasks.
 
-## Status
 
-Experimental.
+Tutorial: TODO
 
-## Contributors
+## Available Boilerplates
 
-- Priyatam Mudivarti
-- Matt Martini
-
-## Credits
-
-- [Responsive Web Design](http://www.adamkaplan.me/grid/)
+- [Introducing Gulp]- Read this first
+- [Gulp Starter](https://github.com/greypants/gulp-starter) - A good
+- [Gulp for HTML5 sites](https://github.com/3bola/gulp-starter) - nice boilerplate for
+- [Yeoman Generator for Gulp](https://github.com/yeoman/generator-gulp-webapp)
 - [Square Boy](https://github.com/harsha-mudi/squareboy)
 
 ## Copyright & License

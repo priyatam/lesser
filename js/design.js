@@ -17,13 +17,5 @@ $(function() {
         }
     });
 
-    // flowtype typography
-    $('.body').flowtype({
-        minimum: 500,
-        maximum: 1200,
-        minFont: 8,
-        maxFont: 32,
-        fontRatio: 30;
-    });
 
 });

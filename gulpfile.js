@@ -79,7 +79,7 @@ gulp.task('build-content', function() {
             smartLists: true,
             smartypants: false
         }))
-        .pipe(concat('haiper.haiku.html'))
+        .pipe(concat('site.haiku.html'))
         .pipe(gulp.dest(config.site));
 });
 
@@ -98,7 +98,7 @@ gulp.task('build-styles', function() {
         .pipe(minifyCSS({
             keepBreaks: true
         }))
-        .pipe(concat('haiper.min.css'))
+        .pipe(concat('site.min.css'))
         .pipe(gulp.dest(config.site))
         .pipe(connect.reload());
 });

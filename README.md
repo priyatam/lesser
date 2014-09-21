@@ -1,60 +1,49 @@
-## Gulp Tutorial
+# Lesser
 
-A gentle introduction to building boilerplates with [gulp](http://gulpjs.com/).
+A minimalist workflow for building Responsive pages, built on Bootstrap and Less.
 
 ## Overview
 
-Gulp lets you build boilerplates for sites and browser apps without the need to learn another toolkit (yeoman, lineman, brunch, etc.,). A boilerplate consists of a set of tasks chained by [streams](https://github.com/substack/stream-handbook). Most tasks are accomplished via a growing set of gulp plugins like [this](https://www.npmjs.org/package/gulp-connect) and [this](https://www.npmjs.org/package/gulp-browserify).
+Protoyping, building, and compiling a designer's assets to a client or a developer is a daunting dask. While generators like Yeoman, Lineman, and numerous SASS frameworks exist, the world of graphic designers who understand these technologies is very, very small, compared to developers and seasoned designers familiar with the toolchain on Ruby and Node.
 
-By composing tasks that do one thing and one thing only, you gain control over your application's flow.
+**Lesser** provides a minimal workflow built on Less, and the world's most popular Responsive toolkit.
 
-For a high level overview, see [Introducing Gulp](http://slides.com/contra/gulp#/).
+Optimized for Typographers and Graphic designers, Lesser comes pre-loaded with [Brick Fonts](http://brick.im/fonts/) and [Beautiful Webtype](https://github.com/ubuwaits/beautiful-web-type), and the required Javascript plugins designed for Typographers.
 
-## Setup
+## Usage
 
-If you've never used npm before, install Node with [homebrew](http://brew.sh/):
+First time node users:
 
     brew install node
 
-Install gulp, globally:
+Then install:
 
-    npm install -g gulp
+    npm install gulp -g
 
-After completing the setup, update your local npm/browserify dependencies (do this everytime you add something to package.json):
-
-    npm install
-
-Run default task on gulp:
+Run:
 
     gulp
 
-## Tutorial (with a sample boilerplate)
+This compiles your Less and Javascript files under `src`, minifies them into `public` folder, and runs a static server with live-reload.
 
-This repo consists of a sample boilerplate to build websites with Stylus, Jade
+Preview at `http://localhost:8000`.
 
-- HTML5/Jade
-- CSS3/Stylus
-- minifier, uglifier, browserify ...
+See [Gulp](/gulpfile.js) for individual tasks.
 
-Run default task on gulp:
+_What is Gulp_?
 
-    gulp
+Gulp is a lightweight task builder for frontned sites and browser apps without the need to learn another toolkit (yeoman, lineman, brunch, etc.,). Tasks are written in simple Javascript using thousands of available gulp plugins like [this](https://www.npmjs.org/package/gulp-connect) and [this](https://www.npmjs.org/package/gulp-browserify).
 
-This minifies css, js, and runs a static server at localhost:8080
+By composing tasks that do one thing and one thing only, you gain control over your workflow.
 
-See [Gulp](/gulpfile.js) for tasks.
+## Further Reading
 
-
-_Tutorial: Incomplete_
-
-## Available Boilerplates
-
-- [Introducing Gulp]- Read this first
-- [Gulp Starter](https://github.com/greypants/gulp-starter) - A good
-- [Gulp for HTML5 sites](https://github.com/3bola/gulp-starter) - nice boilerplate for
-- [Yeoman Generator for Gulp](https://github.com/yeoman/generator-gulp-webapp)
-- [Square Boy](https://github.com/harsha-mudi/squareboy)
+- [Web Typography](http://www.abookapart.com/products/on-web-typography)
+- [Bootstrap Workflow](http://www.helloerik.com/bootstrap-3-less-workflow-tutorial)
+- [Introducing Gulp](http://slides.com/contra/gulp#/)
 
 ## Copyright & License
 
-MIT License. See [LICENSE](/LICENSE) for more details.
+Copyright 2014, Priyatam Mudivarti.
+
+Licensed under MIT.

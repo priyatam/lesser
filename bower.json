@@ -2,6 +2,7 @@
   "name": "lesser",
   "version": "0.1.0",
   "dependencies": {
-    "bootstrap": "~3.2.0"
+    "bootstrap": "~3.2.0",
+    "letteringjs": "0.6.1"
   }
 }

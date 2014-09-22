@@ -1,7 +1,7 @@
 /* Animation */
 $(function() {
 
-    // Smooth Scrolling
+    /* Smooth Scrolling */
     // http://css-tricks.com/snippets/jquery/smooth-scrolling/
 
     $('a[href*=#]:not([href=#])').click(function() {
@@ -17,5 +17,9 @@ $(function() {
         }
     });
 
+    /* HighlightJs */
+    $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
 
 });

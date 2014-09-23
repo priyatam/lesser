@@ -7,13 +7,16 @@ var gulp = require("gulp"),
     concat = require('gulp-concat'),
     source = require('vinyl-source-stream'),
     uglify = require('gulp-uglify'),
+    jshint = require('gulp-jshint'),
     less = require('gulp-less'),
     sourcemaps = require('gulp-sourcemaps'),
-    server = require('gulp-webserver');
+    connect = require('gulp-connect')
+    open = require('gulp-open');
 
 var config = {
     root: path.resolve('./'),
     site: './public',
+    index_html: './public/index.html',
     images: ['./public/img/**/*.png', './img/**/*.jpg'],
     styles: './src/less/**/*.less',
     styles_compiled: './public/css/',
@@ -47,6 +50,13 @@ gulp.task('build-styles', function() {
         .pipe(gulp.dest(config.styles_compiled));
 });
 
+gulp.task('jshint', function () {
+  return gulp.src(config.scripts)
+    .pipe(jshint('.jshintrc'))
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(jshint.reporter('pass'));
+});
+
 gulp.task('build-scripts', function() {
     return gulp.src(config.scripts)
         .pipe(changed(config.site))
@@ -56,11 +66,26 @@ gulp.task('build-scripts', function() {
 });
 
 gulp.task('start-server', function() {
-  gulp.src(config.site)
-    .pipe(server({
-      livereload: true,
-      open: true
-    }));
+  connect.server({
+    root: config.site,
+    port: config.port,
+    livereload: true
+  });
+  console.log('Started web server on http://localhost:', config.port);
 });
 
-gulp.task('default', ['build-styles', 'build-scripts', 'start-server']);
+gulp.task('watch', function() {
+    gulp.watch(config.styles, ['build-styles']);
+    gulp.watch(config.scripts, ['build-scripts']);
+});
+
+gulp.task('open', function() {
+    var options = {
+        url: "http://localhost:" + config.port,
+        app: "google chrome"
+    };
+    gulp.src(config.index_html)
+        .pipe(open("", options));
+});
+
+gulp.task('default', ['build-styles', 'build-scripts', 'start-server', 'watch', 'open']);

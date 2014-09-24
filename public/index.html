@@ -41,24 +41,24 @@
 
         <p>For example:</p>
 
-        <pre><code class="css">
-          @base: #f938ab;
+        <pre><code class="hljs css">
+@base: #f938ab;
 
-          .box-shadow(@style, @c) when (iscolor(@c)) {
-            -webkit-box-shadow: @style @c;
-            box-shadow:         @style @c;
-          }
-          .box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-            .box-shadow(@style, rgba(0, 0, 0, @alpha));
-          }
-          .box {
-            color: saturate(@base, 5%);
-            border-color: lighten(@base, 30%);
-            div { .box-shadow(0 0 5px, 30%) }
-          }
-        </pre></code>
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.box {
+  color: saturate(@base, 5%);
+  border-color: lighten(@base, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+       </code></pre>
 
-        <p class="references"> This is a sample </p>
+       <p class="references"> Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. </p>
       <section>
 
      </article>
@@ -78,6 +78,7 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"></script>
+<script src="/js/scripts.min.js"></script>
 
 </body>
 </html>

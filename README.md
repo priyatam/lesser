@@ -4,11 +4,11 @@ A minimalist workflow for designing responsive pages with Bootstrap and Less.
 
 ## Overview
 
-Protoyping, building, and compiling a designer's assets for a client or developer is a daunting dask. While generators like [Yeoman](http://yeoman.io), [Lineman](http://www.linemanjs.com), and numerous SASS frameworks exist, the world of typographers and designers who understand these technologies is very, very small compared to developers familiar with the tools on Ruby and Node.
+Protoyping, building, and compiling a designer's assets for a client or developer is a daunting dask. While generators like [Yeoman](http://yeoman.io), [Lineman](http://www.linemanjs.com), and numerous frontend frameworks exist, the world of designers who understand these technologies is very, very small compared to developers familiar with the tools on Ruby and Node.
 
 **Lesser** provides a minimal workflow built on Less, and the [world's most popular](http://getbootstrap.com) responsive toolkit.
 
-Optimized for Typographers and Print designers, Lesser comes pre-loaded with [Brick Fonts](http://brick.im/fonts/) and [Beautiful Webtype](http://hellohappy.org/beautiful-web-type/), and the required Javascript plugins designed to work well with Web typography.
+Optimized for Responsive Web Typography, Lesser comes pre-loaded with [Brick Fonts](http://brick.im/fonts/), [Beautiful Webtype](http://hellohappy.org/beautiful-web-type/), and the required Javascript plugins designed to work well with Typography.
 
 Plugins used:
 
@@ -23,19 +23,24 @@ First time node users, install node via [brew](http://brew.sh):
 
     brew install node
 
-Then, install the following core npm modules:
+Clone the Repo from your favorite directory:
+
+    git clone https://github.com/priyatam/lesser.git
+    cd lesser
+
+From the same directory, install the following core npm modules:
 
     npm install gulp -g
     npm install bower -g
 
-Install dependencies:
+Finally, install dependencies:
 
     npm install
     bower install
 
 ### Run
 
-[Gulp](http://gulpjs.com), a lightweight task builder for building frontned sites is used as an asset pipeline.
+[Gulp](http://gulpjs.com), a lightweight task builder for building frontend sites is used as an asset pipeline.
 
 You don't have to learn Javascript or Gulp in order to design pages, but a [basic understanding of Gulp](http://markgoodyear.com/2014/01/getting-started-with-gulp/) would be helpful. For now, just run:
 
@@ -68,8 +73,10 @@ Feedback much appreciated!
 
 ## Further Reading
 
-- [Web Typography](http://www.abookapart.com/products/on-web-typography)
 - [Bootstrap Workflow](http://www.helloerik.com/bootstrap-3-less-workflow-tutorial)
+- [Web Typography](http://www.abookapart.com/products/on-web-typography)
+- [Introduction to Color Theory](http://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437)
+- [HSLa Colors](http://trentwalton.com/2010/12/21/rgba-hsla-css-color/)
 - [Introducing Gulp](http://slides.com/contra/gulp#/)
 
 ## Copyright & License

@@ -22,7 +22,7 @@ var config = {
     styles_compiled: './public/css/',
     scripts: './src/js/**/*.js',
     scripts_compiled: './public/js/',
-    port: 8000
+    port: 9000
 };
 
 gulp.task('clean', function() {

@@ -1,6 +1,36 @@
 {
   "name": "lesser",
+  "description": "A minimalist workflow for designing responsive pages with Bootstrap and Less.",
+  "keywords": [
+    "css",
+    "less",
+    "bootstrap",
+    "workflow",
+    "mobile-first",
+    "responsive",
+    "design"
+    "typography",
+  ],
   "version": "0.1.0",
+  "main": [
+    "src/js/design.js"
+    "src/less/bootstrap.less",
+    "src/less/colors.less",
+    "src/less/mixins.less",
+    "src/less/layout.less",
+    "src/less/typography.less",
+    "src/less/themes.less"
+  ],
+  "ignore": [
+    "/.*",
+    "node_modules",
+    "package.json",
+    "public",
+    ".jshintrc",
+    "**/*.sh",
+    "**/*.txt",
+    "**/*.md"
+  ],
   "dependencies": {
     "bootstrap": "~3.2.0",
     "letteringjs": "0.6.1"

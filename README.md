@@ -2,7 +2,7 @@
 
 A minimalist workflow for designing responsive pages with Bootstrap and Less.
 
-## Overview
+## Rationale
 
 Protoyping, building, and compiling a designer's assets for a client or developer is a daunting dask. While generators like [Yeoman](http://yeoman.io), [Lineman](http://www.linemanjs.com), and numerous frontend frameworks exist, the world of designers who understand these technologies is very, very small compared to developers familiar with the tools on Ruby and Node.
 
@@ -16,6 +16,21 @@ Plugins used:
 - [Fittext](http://fittextjs.com)
 
 ## Usage
+
+    bower install lesser
+
+This will create a set of default less/bootstrap workflow under `.bower_components`. To include these less files and a handy js "as-is", create an empty less file and import _lesser_ files like this:
+
+    @import "./bower_components/lesser/less/bootstrap";
+    @import "./bower_components/bootstrap/less/colors";
+    @import "./bower_components/bootstrap/less/mixins";
+    @import "./bower_components/bootstrap/less/layout";
+    @import "./bower_components/bootstrap/less/typography";
+    @import "./bower_components/bootstrap/less/theme";
+
+Go ahead and create a beautiful, responsive page!
+
+If you're new to Node ecosystem, follow the instructions below.
 
 ### Setup
 
@@ -65,17 +80,18 @@ Once you have your styles setup, `gulp`, will automatically compile and minify a
 
 Include this into your Html page.
 
-## Status
+## Status & Roadmap
 
 **Early in development**.
 
-Feedback much appreciated!
+I've been using Bootstrap since 1.0 and for over two years in several prototypes and frontend apps. This project was created out of frustration with the lack of designer-centric workflows, and simple setups required for designers new to Nodejs ecosystem. Future roadmap includes useful mixins, js helpers, and detailed documentation with examples.
+
+Feedback much appreciated.
 
 ## Further Reading
 
 - [Bootstrap Workflow](http://www.helloerik.com/bootstrap-3-less-workflow-tutorial)
 - [Web Typography](http://www.abookapart.com/products/on-web-typography)
-- [Introduction to Color Theory](http://webdesign.tutsplus.com/articles/an-introduction-to-color-theory-for-web-designers--webdesign-1437)
 - [HSLa Colors](http://trentwalton.com/2010/12/21/rgba-hsla-css-color/)
 - [Introducing Gulp](http://slides.com/contra/gulp#/)
 

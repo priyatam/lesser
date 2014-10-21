@@ -1,7 +1,7 @@
 {
   "name": "lesser",
   "description": "A minimalist workflow for designing responsive pages with Bootstrap and Less",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [
     "css",
     "less",
@@ -16,10 +16,10 @@
     "src/js/design.js",
     "src/less/bootstrap.less",
     "src/less/colors.less",
-    "src/less/mixins.less",
     "src/less/layout.less",
     "src/less/typography.less",
-    "src/less/themes.less"
+    "gulpfile.js",
+    "package.json"
   ],
   "ignore": [
     "/.*",

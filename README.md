@@ -26,18 +26,16 @@ Install _lesser_ and its dependencies:
     npm install
     bower install
     
-Then initialize a project layout:
+Copy the entire folder under the `bower_components/lesser`:
 
     gulp init    
 
-This will create a set of default less/bootstrap workflow with the following structure:
+Your project structure should look like this:
 
     ├── public
     │   ├── img
     │   ├── css
-    │   │   └── styles.min.css
     │   └── js
-    │       └── scripts.min.js
     |   ├── index.html
     │       
     └── src
@@ -50,10 +48,10 @@ This will create a set of default less/bootstrap workflow with the following str
             ├── layout.less
             └── typography.less
     ├── bower.json
-        ├── gulpfile.js
-        ├── package.json
+    ├── package.json
+    ├── gulpfile.js
     
-To compile and preview your site, live, run:
+To compile and design your site, live, run:
 
     gulp
     

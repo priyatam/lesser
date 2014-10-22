@@ -13,11 +13,7 @@ Protoyping and compiling a designer's assets for production sites is a daunting 
 
 ### Setup
 
-First time node users, install node via [brew](http://brew.sh):
-
-    brew install node
-
-Install the following core npm modules:
+Assuming you have node installed via `brew install node`, install the following core npm modules:
 
     npm install gulp -g
     npm install bower -g
@@ -29,28 +25,42 @@ Install _lesser_ and its dependencies:
     bower install lesser
     npm install
     bower install
+    
+Then initialize a project layout:
 
-This will create a set of default less/bootstrap workflow under `.bower_components`. 
+    gulp init    
 
-Your less files can now import _lesser_ files:
+This will create a set of default less/bootstrap workflow with the following structure:
 
-    @import "./bower_components/lesser/less/bootstrap";
-    @import "./bower_components/bootstrap/less/colors";
-    @import "./bower_components/bootstrap/less/layout";
-    @import "./bower_components/bootstrap/less/typography";
-
-That's it. Go ahead, and create a beautiful `index.html` page.
-
-To preview your site, run:
+    ├── public
+    │   ├── img
+    │   ├── css
+    │   │   └── styles.min.css
+    │   └── js
+    │       └── scripts.min.js
+    |   ├── index.html
+    │       
+    └── src
+        ├── js
+        │   ├── layout.js
+        │   └── typography.js
+        └── less
+            ├── bootstrap.less
+            ├── colors.less
+            ├── layout.less
+            └── typography.less
+    ├── bower.json
+        ├── gulpfile.js
+        ├── package.json
+    
+To compile and preview your site, live, run:
 
     gulp
     
 Preview the site at `http://localhost:8000`.
 
 [Gulp](http://gulpjs.com) compiles your Less styles, including Bootstrap's own variables and mixins, Javascript files (if any) under `src`, minifies all of them into `public` folder, and runs a static server that watches for changes. You don't have to learn Javascript or Gulp in order to design pages, but a [basic understanding of Gulp](http://markgoodyear.com/2014/01/getting-started-with-gulp/) would be helpful. 
-
-See [Gulp](/gulpfile.js) for individual tasks.    
-    
+  
 ## Workflow
 
 - Start with a blank page

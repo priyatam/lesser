@@ -6,7 +6,7 @@ A minimalist workflow for designing responsive pages with Bootstrap and Less.
 
 Protoyping and compiling a designer's assets for production sites is a daunting dask. While generators like [Yeoman](http://yeoman.io), [Lineman](http://www.linemanjs.com), and numerous frontend frameworks exist, the world of designers who understand these technologies is small compared to developers familiar with Ruby and Node.
 
-**Lesser** provides a minimal workflow built on Less, and the [world's most popular](http://getbootstrap.com) responsive toolkit. Optimized for Web Typography, Lesser comes recommended fonts from [Brick Fonts](http://brick.im/fonts/), [Beautiful Webtype](http://hellohappy.org/beautiful-web-type/), and the following jQuery plugins designed to work well with Typography.
+**Lesser** provides a minimal workflow built on Less, and the [world's most popular](http://getbootstrap.com) responsive toolkit. Optimized for Web Typography, Lesser comes preloaded with the following jQuery plugins:
 
 - [LetteringJs](http://letteringjs.com)
 - [Fittext](http://fittextjs.com)
@@ -20,17 +20,16 @@ Assuming you have node installed via `brew install node`, install the following 
 
 ## Usage
 
-Install _lesser_ and its dependencies:
+Install _lesser_:
 
     bower install lesser
+    
+ Initialize dependencies:
+ 
     npm install
     bower install
     
-Copy the entire folder under the `bower_components/lesser`:
-
-    gulp init    
-
-Your project structure should look like this:
+Then copy the entire folder under the `bower_components/lesser`. Your project structure should look like this:
 
     ├── public
     │   ├── img
@@ -51,7 +50,7 @@ Your project structure should look like this:
     ├── package.json
     ├── gulpfile.js
     
-To compile and design your site, live, run:
+To compile and design your site, in live-mode, run:
 
     gulp
     

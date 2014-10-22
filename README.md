@@ -24,12 +24,12 @@ Install _lesser_:
 
     bower install lesser
     
- Initialize dependencies:
+ Copy `gulp.js` and `package.json` from `bower_components/lesser` and initialize dependencies:
  
     npm install
-    bower install
+    gulp init
     
-Then copy the entire folder under the `bower_components/lesser`. Your project structure should look like this:
+ Your project structure should now look like this:
 
     ├── public
     │   ├── img
@@ -50,13 +50,15 @@ Then copy the entire folder under the `bower_components/lesser`. Your project st
     ├── package.json
     ├── gulpfile.js
     
-To compile and design your site, in live-mode, run:
+To design your site—live, run:
 
     gulp
     
+[Gulp](http://gulpjs.com) compiles your Less styles, including Bootstrap's own variables and mixins, Javascript files (if any) under `src`, minifies all of them into `public` folder, and runs a static server that watches for changes.
+  
 Preview the site at `http://localhost:8000`.
-
-[Gulp](http://gulpjs.com) compiles your Less styles, including Bootstrap's own variables and mixins, Javascript files (if any) under `src`, minifies all of them into `public` folder, and runs a static server that watches for changes. You don't have to learn Javascript or Gulp in order to design pages, but a [basic understanding of Gulp](http://markgoodyear.com/2014/01/getting-started-with-gulp/) would be helpful. 
+  
+That's it. Hereafter, simply add new pages under `public` and modify your less and js files and gulp will automicatically pick up the changes.
   
 ## Workflow
 

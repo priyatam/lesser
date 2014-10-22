@@ -10,7 +10,8 @@ var gulp = require("gulp"),
     jshint = require('gulp-jshint'),
     less = require('gulp-less'),
     sourcemaps = require('gulp-sourcemaps'),
-    connect = require('gulp-connect')
+    connect = require('gulp-connect'),
+    util = require('gulp-util'),   
     open = require('gulp-open');
 
 var config = {
@@ -27,7 +28,7 @@ var config = {
 
 gulp.task('clean', function() {
     var files = [
-        styles_compiled,
+        config.styles_compiled,
     ];
 
     return gulp.src(files, {
@@ -37,6 +38,11 @@ gulp.task('clean', function() {
           force: true
       }));
 });
+
+gulp.task('init', ['clean'], function() {
+  gulp.src(['bower_components/lesser/**/*.*'])
+  .pipe(gulp.dest(config.root));
+});     
 
 gulp.task('build-styles', function() {
     gulp.src(config.styles)

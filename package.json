@@ -1,6 +1,6 @@
 {
   "name": "lesser",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "lesser",
   "repository": "https://github.com/priyatam/lesser",
   "author": "Priyatam Mudivarti",
@@ -25,7 +25,6 @@
     "gulp-autoprefixer": "^0.0.7",
     "gulp-replace": "^0.3.0",
     "gulp-util": "^2.2.14",
-    "gulp-sourcemaps": "^1.2.2",
     "vinyl-source-stream": "~0.1.1"
   }
 }

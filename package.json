@@ -1,6 +1,6 @@
 {
   "name": "lesser",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "lesser",
   "repository": "https://github.com/priyatam/lesser",
   "author": "Priyatam Mudivarti",
@@ -17,7 +17,6 @@
     "gulp-changed": "~0.3.0",
     "gulp-open": "~0.2.8",
     "gulp-minify-css": "^0.3.4",
-    "gulp-replace": "^0.3.0",
     "gulp-util": "^2.2.14"
   }
 }

@@ -65,7 +65,7 @@ gulp.task('build-scripts', function() {
     return gulp.src(config.scripts)
         .pipe(changed(config.site))
         .pipe(uglify())
-        .pipe(concat('scripts.min.js'))
+        .pipe(concat('lesser.min.js'))
         .pipe(gulp.dest(config.scripts_compiled));
 });
 

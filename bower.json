@@ -17,7 +17,7 @@
     "src/less/colors.less",
     "src/less/typography.less",
     "src/less/layout.less",
-    "public",
+    "gen",
     "gulpfile.js",
     "package.json"
   ],

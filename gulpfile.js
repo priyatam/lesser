@@ -1,4 +1,5 @@
 var gulp = require("gulp"),
+    install = require("gulp-install");
     fs = require('fs'),
     path = require('path'),
     changed = require('gulp-changed'),
@@ -11,6 +12,7 @@ var gulp = require("gulp"),
     connect = require('gulp-connect'),
     util = require('gulp-util'),   
     open = require('gulp-open');
+   
 
 var config = {
     root: path.resolve('./'),
@@ -35,11 +37,16 @@ gulp.task('clean', function() {
     .pipe(clean({
           force: true
       }));
+});    
+
+gulp.task('install', function() {
+    gulp.src(['./bower.json', './package.json'])
+        .pipe(install());
 });
 
-gulp.task('init', ['clean'], function() {
-  gulp.src(['bower_components/lesser/**/*.*'])
-  .pipe(gulp.dest(config.root));
+gulp.task('init', ['install'], function() {
+    gulp.src(['bower_components/lesser/gen/**/'])
+        .pipe(gulp.dest(config.root));
 });     
 
 gulp.task('build-styles', function() {

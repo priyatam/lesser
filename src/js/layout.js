@@ -1,4 +1,4 @@
-/* Animation */
+
 $(function() {
 
     /* Smooth Scrolling */

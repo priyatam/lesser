@@ -1,5 +1,5 @@
-
 /* Responsive Typography */
+
 $(function() {
 
 

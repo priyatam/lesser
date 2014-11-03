@@ -1,0 +1,7 @@
+/* Layout Specific scripts */
+
+$(function() {
+
+
+        
+});

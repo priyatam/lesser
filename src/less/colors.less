@@ -1,7 +1,9 @@
 
-/* Colors */
+/* Imports */
 
-/* Some variables and mixins from Bootstrap (Apache 2 license). */
+
+
+/* Variables */
 
 @base-color: #f921ab;
 
@@ -34,7 +36,17 @@
 // Forms
 @input-color-placeholder: lighten(@text-color, 25%);
 
-// Darkening & Lightening
+
+/* Mixins */
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  -webkit-box-shadow: @style @c;
+  box-shadow:         @style @c;
+}
+
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
 
 .box.darken {
     background-color: @base-color;
@@ -45,8 +57,6 @@
     border: 3px solid lighten(@base-color, 20%);
 }
 
-// Spinning Colors: Adjust the hue of the color.
-
 .box.hue {
     background-color: spin(@base-color, 123);
 }
@@ -55,18 +65,10 @@
     background-color: desaturate(spin(@base-color, 123), 50%);
 }
 
-// Mixing Colors
+
+/* Styles */
+
 .box.mix {
     background-color: mix(@black-10, @black-20, 50%);
 }
 
-/* Shadows */
-
-.box-shadow(@style, @c) when (iscolor(@c)) {
-  -webkit-box-shadow: @style @c;
-  box-shadow:         @style @c;
-}
-
-.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-  .box-shadow(@style, rgba(0, 0, 0, @alpha));
-}

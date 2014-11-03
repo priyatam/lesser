@@ -7,6 +7,7 @@ public/css/*.css
 public/js/*.js
 
 # Misc
+.sublime*
 build
 .*.swp
 ._*

@@ -1,7 +1,7 @@
 {
   "name": "lesser",
   "description": "A minimalist workflow for designing responsive pages with Bootstrap and Less",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "keywords": [
     "less",
     "bootstrap",

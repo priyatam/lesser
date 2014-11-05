@@ -1,7 +1,7 @@
-/* Main less file to import at root */
+/* Import Bootstrap Styles and Mixins */
 
-/* A subset of Bootstrap components are included in Lesser. Don't forget to include `bootstrap.less`
-   in your less source files to refer Bootstrap's core components.
+/* Lesser includes a subset of Bootstrap, for Responsive Typgography. In particular, Lesser excludes Bootstrap's 
+   buttons, navbars, etc., and all Javascript components.
 */
 
 // Core variables and mixins
@@ -11,6 +11,7 @@
 // Reset and dependencies
 @import "./bower_components/bootstrap/less/normalize";
 @import "./bower_components/bootstrap/less/print";
+@import "./bower_components/bootstrap/less/glyphicons";
 
 // Core CSS
 @import "./bower_components/bootstrap/less/scaffolding";
@@ -18,18 +19,16 @@
 @import "./bower_components/bootstrap/less/code";
 @import "./bower_components/bootstrap/less/grid";
 @import "./bower_components/bootstrap/less/forms";
-@import "./bower_components/bootstrap/less/buttons";
 
 // Components
 @import "./bower_components/bootstrap/less/component-animations";
-@import "./bower_components/bootstrap/less/button-groups";
 @import "./bower_components/bootstrap/less/navs";
 @import "./bower_components/bootstrap/less/labels";
 @import "./bower_components/bootstrap/less/media";
 @import "./bower_components/bootstrap/less/list-group";
+@import "./bower_components/bootstrap/less/panels";
 @import "./bower_components/bootstrap/less/responsive-embed";
 
 // Utility classes
 @import "./bower_components/bootstrap/less/utilities";
-
-
+@import "./bower_components/bootstrap/less/responsive-utilities";

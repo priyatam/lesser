@@ -1,7 +1,0 @@
-/* Responsive Typography */
-
-$(function() {
-
-
-
-});

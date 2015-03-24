@@ -1,0 +1,33 @@
+/* Imports */
+
+@import "bootstrap";
+@import "layout";
+@import "typography";
+@import "colors";
+
+/* Variables */
+
+
+
+/* Mixins */
+
+
+
+/* Styles */
+
+.box {
+  color: saturate(@base-color, 5%);
+  border-color: lighten(@base-color, 30%);
+  div { .box-shadow(0 0 5px, 30%) }
+}
+
+.tags {
+  font-size: 75%;
+  text-align: left;
+}
+
+.sidebar {
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: @font-family-sans-serif;
+}

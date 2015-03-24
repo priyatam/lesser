@@ -1,41 +1,33 @@
 {
   "name": "lesser",
-  "description": "A minimalist workflow for designing responsive pages with Bootstrap and Less",
-  "version": "0.2.1",
+  "description": "A minimalist workflow for designing responsive pages with Less",
+  "version": "0.3.0",
   "keywords": [
     "less",
-    "bootstrap",
     "workflow",
-    "mobile-first",
     "responsive",
+    "grids",
     "typography"
   ],
   "main": [
     "src/js/typography.js",
-    "src/js/layout.js",
+    "src/js/grids.js",
     "src/less/bootstrap.less",
     "src/less/colors.less",
     "src/less/typography.less",
-    "src/less/layout.less",
-    "gen",
-    "gulpfile.js",
-    "package.json"
+    "src/less/grids.less"
   ],
   "ignore": [
     "/.*",
     "node_modules",
-    "examples",
-    "public/css/styles.min.css",
-    "public/js/lesser.min.js",
-    "public/img/*.*",
+    "bower_components",
+    "example",
     ".jshintrc",
-    "**/*.sh",
     "**/*.txt",
     "**/*.md"
   ],
   "dependencies": {
     "bootstrap": "~3.3.0",
-    "lesshat": "~3.0.2",
     "FitText.js": "~1.2.0",
     "letteringjs": "0.6.1",
     "Flowtype.js": "~1.1.0"

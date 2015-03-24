@@ -1,45 +1,60 @@
-/* Imports */
-
-@import "bootstrap";
-@import "colors";
+@import "../../bower_components/bootstrap/less/type";
 
 // Web Fonts
 
-@import url(http://brick.a.ssl.fastly.net/Libre+Baskerville:400,400i,700);
-@import url(http://brick.a.ssl.fastly.net/Alegreya:400,400i,700,700i,900,900i);
-@import url(http://brick.a.ssl.fastly.net/BPreplay:400,400i,700);
-@import url(http://brick.a.ssl.fastly.net/Source+Code+Pro:200,300);
+@import (css) url('http://brick.a.ssl.fastly.net/Libre+Baskerville:400,400i,700');
+@import (css) url('http://brick.a.ssl.fastly.net/BPreplay:400,400i,700');
+@import (css) url('http://brick.a.ssl.fastly.net/Source+Code+Pro:200,300');
 
+// Variables
 
-/* Variables */
-
-@font-family-base: 'Libre Baskerville', serif;
 @font-family-serif: 'Alegreya', serif;
-@font-family-sans-serif: 'BPreplay', Helvetica, sans-serif;
+@font-family-sans-serif: 'Fira Sans', Helvetica, sans-serif;
 @font-family-monospace: "Source Code Pro", Monaco, monospace;
+@font-family-base: @font-family-sans-serif;
 
 @font-size-base: 1.5rem;
 @line-height-base: 1.45rem;
+@line: 24;
+@em: @font-size-base*1em;
 
+// Mixins
 
-/* Mixins  */
+.typset(@fonts, @size, @pads) {
+  font: normal normal 600 3rem @font;
+  padding-left:  (@gutter / 4);
+  padding-right: (@gutter / 4);
 
+  @media (min-width:@screen-tablet) {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
 
-/* Styles */
+  @media (min-width:@screen-tablet) {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
 
-.box {
-  color: saturate(@base-color, 5%);
-  border-color: lighten(@base-color, 30%);
-  div { .box-shadow(0 0 5px, 30%) }
-}
+  @media (min-width:@screen-tablet) {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
 
-header {
-  font: normal small-caps 900 4rem @font-family-sans-serif;
-}
+  @media (min-width:@screen-tablet) {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
 
-h1 {
-  font: normal normal 600 3rem @font-family-sans-serif;
-  margin: bottom 10px;
+  @media (min-width:@screen-tablet) {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+
   @media (min-width:@screen-tablet) {
     font-size: 40px;
     margin-bottom: 20px;
@@ -47,43 +62,246 @@ h1 {
   }
 }
 
+// Styles
+
+// Based on Golden Ratio
+
+header {
+  font: normal small-caps 700 4em @font-family-sans-serif;
+}
+
+h1 {
+
+  @media (min-width:@screen-lg-min) {
+    font: normal normal 700 6.854em @font-family-sans-serif;
+    margin: 3rem;
+    padding: 3rem;
+  }
+
+  @media (min-width:@screen-md-min) {
+    font: normal normal 500 4.236em @font-family-sans-serif;
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+}
+
 h2 {
-  font: normal normal 600 3rem @font-family-sans-serif;
+
+  @media (min-width:@screen-lg-min) {
+    font: normal normal 700 4.236em @font-family-sans-serif;
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  @media (min-width:@screen-md-min) {
+    font: normal normal 500 2.618em @font-family-sans-serif;
+    margin: 2rem;
+    padding: 2rem;
+  }
 }
 
 h3 {
-  font: normal normal 300 2rem @font-family-serif;
+
+  @media (min-width:@screen-lg-min) {
+    font: normal normal 500 2.618em @font-family-sans-serif;
+    margin: 2rem;
+    padding: 2rem;
+  }
+  @media (min-width:@screen-md-min) {
+    font: normal normal 400 1.618em @font-family-sans-serif;
+    margin: 2rem;
+    padding: 2rem;
+  }
 }
 
 h4 {
-  font: normal normal 300 1.5rem @font-family-serif;
+
+  @media (min-width:@screen-lg-min) {
+    font: normal normal 400 1.618em @font-family-sans-serif;
+    margin: 2rem;
+    padding: 2rem;
+  }
+  @media (min-width:@screen-md-min) {
+    font: normal normal 300 1.2em @font-family-sans-serif;
+    margin: 1rem;
+    padding: 1rem;
+  }
 }
 
-h5, h6 {
-  font: italic italic 300 1.5rem @font-family-serif;
+h5 {
+  @media (min-width:@screen-lg-min) {
+    font: normal normal 300 1em @font-family-sans-serif;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  @media (min-width:@screen-md-min) {
+    font: normal normal 300 1em @font-family-sans-serif;
+    margin: 1rem;
+    padding: 1rem;
+  }
+}
+
+h6 {
+  @media (min-width:@screen-lg-min) {
+    font: normal normal 300 0.618em @font-family-sans-serif;
+    margin: 1rem;
+    padding: 1rem;
+  }
+  @media (min-width:@screen-md-min) {
+    font: normal normal 300 0.618em @font-family-sans-serif;
+    margin: 1rem;
+    padding: 1rem;
+  }
 }
 
 body, p {
-  font: normal normal 300 2rem/3rem @font-family-base;
+  font: normal normal 300 1.5em/1.5em @font-family-base;
+}
+
+p.indent {
+  padding: 1rem;
+  text-indent: 2rem;
+}
+
+blockquote {
+  font-family: @font-family-serif;
+  font-size: 2em;
+  font-weight: 300;
+  line-height: 1.6em;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+
+  &:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+
+  p {
+    display: inline;
+  }
+  cite {
+    text-align: right;
+  }
+}
+
+small {
+
+}
+
+ul {
+  font: italic normal 300 1.5rem @font-family-sans-serif;
+  margin: 1rem;
+  padding: 1rem;
+  list-style-type: disc;
+  text-align: left;
+  display: block;
+
+  li {
+    font: normal normal 300 1.5em @font-family-sans-serif;
+  }
+}
+
+a {
+  padding: 2px;
+}
+
+pre {
+  padding: ((@line-height-computed - 1) / 2);
+  margin: 0 0 (@line-height-computed / 2);
+  font-size: (@font-size-base * 0.85); // 14px to 13px
+  line-height: (@line-height-base * 1.25);
+  word-break: break-all;
+  word-wrap: break-word;
+
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+  }
+}
+
+pre:first-line {
+  line-height: 0px;
 }
 
 footer {
   font: normal normal 100 1rem @font-family-sans-serif;
 }
 
-ul {
-  font: italic normal 300 1.5rem @font-family-sans-serif;
-  margin: 1px;
-  padding: 1px;
-  list-style-type: disc;
-  text-align: left;
-  display: block;
+body {
+  font-size: @font-size-base / 16*1em;
+  line-height: @line / @em;
+  font-family: @font-family-base;
 }
 
-li {
-  font: normal normal 300 1.5rem @font-family-sans-serif;
+.small, #nav span, #downloads strong {
+  font-size: 13/@em;
+  line-height: @line/13*1em;
 }
 
-a {
-  padding: 2px;
+.normal, h1, h2, h3, h4 {
+  font-size: 1em;
+}
+
+.big {
+  font-size: 23/@em;
+  line-height: 24/23*1em;
+}
+
+.large {
+  font-size: 27/@em;
+  line-height: 36/27*1em;
+}
+
+.huge {
+  font-size: 44/@em;
+  line-height: 48/44*1em;
+}
+
+.enormous {
+  font-size: 72/@em;
+  line-height: 72/72*1em;
+}
+
+.gigantic {
+  font-size: 116/@em;
+  line-height: 120/116*1em;
+}
+
+article p, #colophon p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+h2 {
+  padding-top: 48/@em;
+}
+
+h3 {
+  margin-top: 24/@em;
+}
+
+h1, #nav span, h2, h3, #nav a, strong {
+  font-weight: 500;
+}
+
+#masthead h1, h2 {
+  text-transform: uppercase;
+  letter-spacing: 1.1/@em;
+}
+
+#introduction h1 {
+  text-align: center;
+  font-style: italic;
 }

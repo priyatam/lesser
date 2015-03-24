@@ -1,0 +1,51 @@
+@import "../../bower_components/bootstrap/less/grid";
+
+// Sections & Articles
+
+main header {
+  padding: 1rem;
+
+  
+  h1 {
+    padding: 1rem;
+    font: normal normal 700 4rem @font-family-serif;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    padding: 1rem;
+    font: normal italic 200 1.5rem @font-family-base;
+    letter-spacing: 0.2em;
+    text-align: center;
+  }
+}
+
+main footer {
+  padding: 15rem;
+  font: normal normal 200 2rem @font-family-serif;
+  text-align: center;
+}
+
+section > header > h1 {
+  padding: 5rem;
+  font: normal italic 100 1.6rem @font-family-base;
+  letter-spacing: 0.2em;
+  text-align: left;
+}
+
+article > header > h3 {
+  font: normal italic 400 3rem @font-family-base;    
+}
+
+// Container
+main {
+  .container-fixed();
+   padding: 2rem 5rem 2rem 5rem;
+   margin: 1rem 3rem 1rem 3rem;
+}
+
+.inline {
+  display: inline;
+}
